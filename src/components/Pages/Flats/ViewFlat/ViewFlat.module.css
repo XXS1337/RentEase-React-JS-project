@@ -1,0 +1,176 @@
+.viewFlat {
+    max-width: 50rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    text-align: left;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.flatDetails {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.imageContainer {
+    max-width: 16rem;
+}
+
+.flatImage {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.detailsContainer {
+    max-width: 16rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailsContainer p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.detailsContainer strong {
+    color: #333;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.backToHomepage,
+.editFlat,
+.envelopeIcon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.backToHomepage {
+    color: #4a90e2;
+}
+
+
+.backToHomepage:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+    color: #357ab8;
+}
+
+.editFlat {
+    color: #f39c12;
+}
+
+.editFlat:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+    color: #d87a00;
+}
+
+/* Hover Effect for Envelopes */
+
+.envelopeIcon {
+    color: #007bff;
+}
+
+.envelopeIcon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+    color: #007bff;
+}
+
+/* Active State */
+.envelopeIcon.active {
+    color: #ff5722;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+@media (max-width: 850px) {
+    .viewFlat {
+        margin: 0rem auto;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .viewFlat {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .flatDetails {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        max-width: 100%;
+    }
+
+    .flatImage {
+        width: 100%;
+    }
+
+    .flatImage img {
+        width: 100%;
+    }
+
+    .detailsContainer {
+        max-width: 100%;
+    }
+
+        .detailsContainer p {
+            font-size: 0.9rem;
+           }
+
+    .backToHomepage,
+    .editFlat,
+    .envelopeIcon {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+}

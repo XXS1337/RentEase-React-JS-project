@@ -1,0 +1,210 @@
+/* General Container */
+.myFlats {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h2 {
+    color: #4a90e2;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.newFlatButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #4a90e2;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newFlatButton:hover {
+    background-color: #357ab8;
+}
+
+.noResults {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff6f61;
+}
+
+/* Grid Container */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30rem);
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+/* Grid Items (Flat Cards) */
+.gridItem {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+}
+
+.gridItem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.flatImage {
+    width: 50%;
+    cursor: pointer;
+}
+
+.flatImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flatDetails {
+    width: 50%;
+    height: 100%;
+    padding: 1rem 1rem 3rem;
+    position: relative;
+}
+
+.flatDetails h3 {
+    font-size: 1.25rem;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+}
+
+.flatDetails p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Icons */
+.deleteFlat,
+.editFlat {
+    position: absolute;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: none;
+}
+
+.deleteFlat {
+    right: 1rem;
+    color: red;
+}
+
+.editFlat {
+    left: 1rem;
+    color: #4a90e2;
+}
+
+.deleteFlat:hover,
+.editFlat:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width:850px) {
+
+    .myFlats {
+        margin: 0 auto;
+    }
+
+    .gridContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .flatDetails {
+        font-size: 0.85rem;
+    }
+
+}
+
+@media (max-width:550px) {
+
+    .myFlats {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .header {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+    }
+
+    .newFlatButton {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 0.6rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .flatDetails h3 {
+        font-size: 1rem;
+    }
+
+    .gridContainer {
+        gap: 1rem;
+    }
+
+    .gridItem {
+        flex-direction: column;
+    }
+
+    .flatImage,
+    .flatDetails {
+        width: 100%;
+    }
+
+    .flatImage img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .flatDetails h3 {
+        font-size: 1rem;
+    }
+
+    .flatDetails p {
+        font-size: 0.9rem;
+    }
+
+    .deleteFlat,
+    .editFlat {
+        font-size: 1.25rem;
+    }
+
+    .noResults {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
+}
